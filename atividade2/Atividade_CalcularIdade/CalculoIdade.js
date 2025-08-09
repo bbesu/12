@@ -11,9 +11,13 @@ function AnoNasc(){
 function calculo() {
         let anoAtual = new Date().getFullYear();
         let idade = AnoNasc();
+
+        if(idade<1920 || idade>2025){
+            Resultado.textContent = `Ano invalido`;}
+        else{
         Resultado.textContent = `Você tem por volta de ${anoAtual - idade} anos.`;
     }
-                
+}          
     document.getElementById("Calculo").addEventListener("click", calculo);              
         
     })
